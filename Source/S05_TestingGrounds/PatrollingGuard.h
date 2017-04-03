@@ -5,7 +5,7 @@
 #include "TP_ThirdPerson/TP_ThirdPersonCharacter.h"
 #include "PatrollingGuard.generated.h"
 
-//class UChooseNextWaypoint;
+class UChooseNextWaypoint;
 
 /**
  * 
@@ -15,13 +15,10 @@ class S05_TESTINGGROUNDS_API APatrollingGuard : public ATP_ThirdPersonCharacter
 {
 	GENERATED_BODY()
 	
-private:
+public:
 	UPROPERTY(EditInstanceOnly, Category = "Patrol Route")
 	TArray<AActor*> PatrolPoints;
 
-	/*int32 Index = 0;
+private:
 
-	UChooseNextWaypoint ChooseNextWaypoint;
-
-	void CycleIndex();*/
 };

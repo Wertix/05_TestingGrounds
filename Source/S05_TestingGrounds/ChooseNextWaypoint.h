@@ -13,14 +13,19 @@ class S05_TESTINGGROUNDS_API UChooseNextWaypoint : public UBTTaskNode
 {
 	GENERATED_BODY()
 	
-//public:
-	//int32 ReturnIndex() const;
+public:
+	int32 ReturnIndex() const;
 
 protected:
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
 	struct FBlackboardKeySelector IndexKey;
 
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+	struct FBlackboardKeySelector WaypointKey;
+
 private:
+	//UChooseNextWaypoint();
+
 	int32 Index = 0;
 
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory) override;
